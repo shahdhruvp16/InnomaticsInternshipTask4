@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛍️ ShopEasy - Your Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h1>🛒 ShopEasy</h1>
+        <div class="cart-icon" onclick="toggleCart()">
+            🛍️ <span id="cart-count">0</span>
+        </div>
+    </nav>
+    
+    <div class="product-list">
+        <div class="product" data-id="1" data-name="Mobile" data-price="500">
+            <img src="https://m.media-amazon.com/images/I/71heh+bWE1L.jpg" alt="Mobile">
+            <h3>📱 Mobile</h3>
+            <p>$500</p>
+            <button onclick="addToCart(1, 'Mobile', 500)">🛒 Add to Cart</button>
+        </div>
+        <div class="product" data-id="2" data-name="Laptop" data-price="1200">
+            <img src="https://www.reliancedigital.in/medias/HP-EG3081TU-Laptop-493842049-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1NDgwMHxpbWFnZS9qcGVnfGltYWdlcy9oNTIvaDEwLzEwMTUwNDcyODQzMjk0LmpwZ3w1MjI0NWJhNjE4NWU3YjhkMmFlOTdkZDFiZGYzNjBjZmVhY2IyMTliNjk1ODZjNjdkYzA5Y2YyNDFiZjhhMzdi" alt="Laptop">
+            <h3>💻 Laptop</h3>
+            <p>$1200</p>
+            <button onclick="addToCart(2, 'Laptop', 1200)">🛒 Add to Cart</button>
+        </div>
+        <div class="product" data-id="3" data-name="Headphones" data-price="150">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/products/main2_b66dce6b-710d-49cb-9d1c-2bc8c9c0ab15_600x.png?v=1645698328" alt="Headphones">
+            <h3>🎧 Headphones</h3>
+            <p>$150</p>
+            <button onclick="addToCart(3, 'Headphones', 150)">🛒 Add to Cart</button>
+        </div>
+        <div class="product" data-id="4" data-name="Smart Watch" data-price="250">
+            <img src="https://m.media-amazon.com/images/I/61TapeOXotL.jpg" alt="Smart Watch">
+            <h3>⌚ Smart Watch</h3>
+            <p>$250</p>
+            <button onclick="addToCart(4, 'Smart Watch', 250)">🛒 Add to Cart</button>
+        </div>
+        <div class="product" data-id="5" data-name="Bluetooth Speaker" data-price="180">
+            <img src="https://avstore.in/cdn/shop/files/2.AVStore-JBL-PartyBox-110-160W-Portable-Wireless-Speaker-Front-Left-Angled-View.jpg?v=1682411625&width=2000" alt="Bluetooth Speaker">
+            <h3>🔊 Bluetooth Speaker</h3>
+            <p>$180</p>
+            <button onclick="addToCart(5, 'Bluetooth Speaker', 180)">🛒 Add to Cart</button>
+        </div>
+        <div class="product" data-id="6" data-name="Gaming Mouse" data-price="80">
+            <img src="https://m.media-amazon.com/images/I/61DucklSlBL.jpg" alt="Gaming Mouse">
+            <h3>🖱️ Gaming Mouse</h3>
+            <p>$80</p>
+            <button onclick="addToCart(6, 'Gaming Mouse', 80)">🛒 Add to Cart</button>
+        </div>
+        <div class="product" data-id="7" data-name="Mechanical Keyboard" data-price="130">
+            <img src="https://antesports.com/wp-content/uploads/2023/04/1_c5c6da47-29a5-434c-8b45-4303e1906886.png" alt="Mechanical Keyboard">
+            <h3>⌨️ Mechanical Keyboard</h3>
+            <p>$130</p>
+            <button onclick="addToCart(7, 'Mechanical Keyboard', 130)">🛒 Add to Cart</button>
+        </div>
+        <div class="product" data-id="8" data-name="USB-C Charger" data-price="40">
+            <img src="https://chargingcable.in/cdn/shop/files/1_b5035f15-621e-49aa-843d-ae9ea35a5402_1.jpg?v=1732530023" alt="USB-C Charger">
+            <h3>🔌 USB-C Charger</h3>
+            <p>$40</p>
+            <button onclick="addToCart(8, 'USB-C Charger', 40)">🛒 Add to Cart</button>
+        </div>
+        <div class="product" data-id="9" data-name="Tablet" data-price="700">
+            <img src="https://i03.appmifile.com/333_item_in/04/07/2024/33769d7bfd4ae8b6c837ff1996b5b2fa.png" alt="Tablet">
+            <h3>📲 Tablet</h3>
+            <p>$700</p>
+            <button onclick="addToCart(9, 'Tablet', 700)">🛒 Add to Cart</button>
+        </div>
+        <div class="product" data-id="10" data-name="Camera" data-price="950">
+            <img src="https://shopatsc.com/cdn/shop/products/CX88500_SEL2470GM_right.jpg?v=1697633535" alt="Camera">
+            <h3>📷 Camera</h3>
+            <p>$950</p>
+            <button onclick="addToCart(10, 'Camera', 950)">🛒 Add to Cart</button>
+        </div>
+    </div>
+    
+    <div class="cart" id="cart-panel">
+        <button id="cart-close-btn">❌ Close</button> <!-- Close button -->
+        <h2>Your Cart 🛒</h2>
+        <div id="cart-items"></div>
+        <p>Total: $<span id="cart-total">0</span></p>
+        <button onclick="clearCart()">🗑️ Clear Cart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
